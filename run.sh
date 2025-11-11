@@ -23,12 +23,16 @@ setup_env_file() {
 }
 
 set_openrouter_api_key() {
+    if [ -f .env ]; then
+        sed -i '' '/^OPENROUTER_API_KEY=/d' .env
+    fi
+
     read -p "Enter your OPENROUTER_API_KEY: " api_key
     echo "OPENROUTER_API_KEY=$api_key" >> .env
 }
 
 setup_env_command() {
-    # setup_env_file
+    setup_env_file
     set_openrouter_api_key "$1"
 }
 
