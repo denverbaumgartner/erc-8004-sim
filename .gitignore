@@ -432,3 +432,11 @@ rubi-py/
 scratch/
 
 .cursor/
+.claude/
+md/
+
+# erc-8004-sim
+agent_arena_logs/
+csv_export/
+pyevm_export/
+erc-8004-local-agents/requirements.txt
