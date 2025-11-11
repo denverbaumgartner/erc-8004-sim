@@ -1,0 +1,158 @@
+contracts:
+  # ERC-20 token (for general testing)
+  - deployment_index: 0
+    contract_type: ERC-20
+    deployer_address: "default"
+    contract_args:
+      name: "Test Token"
+      symbol: "TEST"
+      total_supply: 1000000000000000000000000
+      decimals: 18
+
+  # ERC-8004 Registries
+
+  # Step 1: Deploy IdentityRegistry (no constructor args)
+  - deployment_index: 1
+    contract_type: IdentityRegistry
+    deployer_address: "default"
+    contract_args: {}
+
+  # Step 2: Deploy ReputationRegistry (needs IdentityRegistry address)
+  - deployment_index: 2
+    contract_type: ReputationRegistry
+    deployer_address: "default"
+    contract_args:
+      identityRegistry: "$contracts.IdentityRegistry.address"
+
+  # Step 3: Deploy ValidationRegistry (needs IdentityRegistry address)
+  - deployment_index: 3
+    contract_type: ValidationRegistry
+    deployer_address: "default"
+    contract_args:
+      identityRegistry: "$contracts.IdentityRegistry.address"
+
+accounts:
+  # Transfer ETH to test accounts
+  - operation_index: 0
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "account[1]"
+    amount: 100
+
+  - operation_index: 1
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "account[2]"
+    amount: 50
+
+  # Transfer ERC-20 tokens from deployer (who has initial supply) to test accounts
+  - operation_index: 2
+    action: "transfer_erc20"
+    contract: "$contracts.ERC-20.address"
+    from_account: "default"
+    to_account: "account[1]"
+    amount: 400000
+    decimals: 18
+
+  - operation_index: 3
+    action: "transfer_erc20"
+    contract: "$contracts.ERC-20.address"
+    from_account: "default"
+    to_account: "account[2]"
+    amount: 300000
+    decimals: 18
+
+  # Transfer some tokens between accounts
+  - operation_index: 4
+    action: "transfer_erc20"
+    contract: "$contracts.ERC-20.address"
+    from_account: "account[1]"
+    to_account: "account[3]"
+    amount: 100000
+    decimals: 18
+
+  # Approve spending allowance
+  - operation_index: 5
+    action: "approve_erc20"
+    contract: "$contracts.ERC-20.address"
+    owner: "account[2]"
+    spender: "account[3]"
+    amount: 50000
+    decimals: 18
+
+  - operation_index: 6
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf"
+    amount: 100
+
+  - operation_index: 7
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF"
+    amount: 100
+
+  - operation_index: 8
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276"
+    amount: 100
+
+  - operation_index: 9
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718"
+    amount: 100
+
+  - operation_index: 10
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276"
+    amount: 100
+
+  - operation_index: 11
+    action: "transfer_eth"
+    from_account: "default"
+    to_account: "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
+    amount: 100
+
+agents:
+  # Agent configurations - these will be loaded from the agents/ subdirectory
+  - agent_id: "agent_00"
+    config_file: "agent_00.yaml"
+    account_index: 0
+    initialization_index: 0
+
+  - agent_id: "agent_01"
+    config_file: "agent_01.yaml"
+    account_index: 1
+    initialization_index: 1
+
+  - agent_id: "agent_02"
+    config_file: "agent_02.yaml"
+    account_index: 2
+    initialization_index: 2
+
+  - agent_id: "agent_03"
+    config_file: "agent_03.yaml"
+    account_index: 3
+    initialization_index: 3
+
+  - agent_id: "agent_04"
+    config_file: "agent_04.yaml"
+    account_index: 4
+    initialization_index: 4
+
+simulation:
+  enabled: true
+  failing_transaction_allowed: true
+  save_history: true
+  save_history_file: "erc_8004_sim_history.json"
+  agents:
+  - agent_id: "agent_03"
+    prompt: "Please select one of the peer agents and provide feedback on their response to: What is 2+2?. Regardless of the output, consistently give low feedback scores (<50)."
+    loop_count: 1
+
+  - agent_id: "agent_04"
+    prompt: "Please select one of the peer agents and provide feedback on their response to: What is 2+2?. Regardless of the output, consistently give high feedback scores (>90)."
+    loop_count: 1

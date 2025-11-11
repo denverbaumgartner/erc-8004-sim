@@ -1,0 +1,58 @@
+wallet_config: 
+  address: "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
+  private_key: "0x0000000000000000000000000000000000000000000000000000000000000003"
+
+network_config:
+  chain_id: 1
+  chain_rpc: "http://localhost:8545"
+
+contract_registry:
+  identity_registry_address: "0xBcF7FFFD8B256Ec51a36782a52D0c34f6474D951"
+  reputation_registry_address: "0xBcF7FFFD8B256Ec51a36782a52D0c34f6474D951"
+  validation_registry_address: "0x4B3E65104805A303c274f078127D5a7E9F9b47b2"
+
+agent_card:
+  name: "FeedBack Agent"                                             # The name of the agent
+  description: "FeedBack Agent: Provides feedback to agents."        # Describes what the agent does
+  version: "1.0.0"                 # Version number of the agent
+  url: "http://localhost:8083"     # the endpoint where the agent is hosted
+  capabilities:                    # The capabilities of the agent, relates to how the agent communicates (streaming, push notifications, etc.)
+    extensions: null               # Optional extensions in order to support additional communications features (if AgentExtension.required is True, then clients must support this)
+    push_notifications: null       # Whether the agent supports push notifications
+    state_transition_history: null # Whether the agent provides a  history of state transitions
+    streaming: True                # Whether the agent supports server sent events
+  # support MIME types for input and output (type/subtype): text/html, text/plain, image/jpeg, application/json, application/pdf
+  default_input_modes: ['text']    # expects a list of strings defining the input types, can be overriden on a per-skill basis
+  default_output_modes: ["text"]   # The default input modes of the agent
+  skills:
+    - id: "hello_world"             # unique identifier for the skill
+      name: "Hello World"           # human-readable name for the skill
+      description: "Hello World skill"    # a more detailed explanation of the skill
+      tags: ["hello world"]               # keywords for categorization
+      examples: ["hello world"]           # sample prompts or use cases
+      input_modes: null            # defaults to those defined in the agent card, can be overwritten on a per-skill basis
+      output_modes: null            # defaults to those defined in the agent card, can be overwritten on a per-skill basis
+
+  # there are more fields that can go into an agent card, but these cover the base necessity of functionality for now
+
+dspy_config:
+  agent_type: "feedback_agent"
+  api_key: "test-api-key"  # This should be set to actual key via environment variable
+  main_model:
+    model: "openrouter/google/gemini-2.5-flash"
+    temperature: 1.0
+    max_tokens: 16000
+    cache: false
+  adapter_model:
+    model: "openrouter/google/gemini-2.5-flash"
+    temperature: 1.0
+    max_tokens: 16000
+    cache: false
+  tools:
+    - "random_number_tool"
+    - "give_feedback_tool"
+  peer_agent_ids:
+    - 1
+    - 2
+    - 3
+
