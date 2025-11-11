@@ -5,10 +5,10 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List
 
+from web3.providers.eth_tester import EthereumTesterProvider
 from web3.types import TxReceipt
 
 from erc_8004_local_agents.data.decoder import decode_logs_from_receipt
-from tests.fixtures.provider import EthereumTesterProvider
 
 logger = logging.getLogger(__name__)
 
