@@ -28,6 +28,7 @@ eth-tester = "^0.13.0b1"
 web3 = {extras = ["tester"], version = "^7.14.0"}
 dspy = "^3.0.3"
 polars = "^1.35.1"
+textual = "^6.5.0"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -39,7 +40,6 @@ isort = "^7.0.0"
 flake8 = "^7.3.0"
 pyright = "^1.1.406"
 pytest-asyncio = "^1.2.0"
-textual = "^6.5.0"
 httpx = "^0.28.1"
 
 [tool.black]
