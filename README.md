@@ -36,3 +36,13 @@ Then run the simulation:
 ```bash
 ./run.sh run-tui
 ```
+
+## Deeper Dive
+
+For more detailed information about the different components of this simulation, please refer to the following `README` files:
+
+- [Simulation Configs](./erc-8004-local-agents/configs/README.md)
+- [Underlying Agent and Tools](./erc-8004-local-agents/src/erc_8004_local_agents/dspy_base_agent/README.md)
+- [A2A Agent](./erc-8004-local-agents/src/erc_8004_local_agents/agents/README.md)
+- [Simulation Runner](./erc-8004-local-agents/sim/README.md)
+- [The Simulation TUI](./erc-8004-local-agents/src/erc_8004_local_agents/tui/README.md)
