@@ -15,8 +15,8 @@ from erc8004 import ERC8004Client
 
 from erc_8004_local_agents.agents.base import ChainedAgent
 from erc_8004_local_agents.agents.base_server import BaseServer
+from erc_8004_local_agents.data.evm_export import save_history_to_json
 from tests.fixtures.provider import EthereumTesterProvider
-from tests.helpers.evm_export import save_history_to_json
 
 logger = logging.getLogger(__name__)
 

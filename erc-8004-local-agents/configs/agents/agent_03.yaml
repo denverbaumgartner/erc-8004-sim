@@ -42,12 +42,12 @@ dspy_config:
     model: "openrouter/google/gemini-2.5-flash"
     temperature: 1.0
     max_tokens: 16000
-    cache: false
+    cache: true
   adapter_model:
     model: "openrouter/google/gemini-2.5-flash"
     temperature: 1.0
     max_tokens: 16000
-    cache: false
+    cache: true
   tools:
     - "random_number_tool"
     - "give_feedback_tool"

@@ -13,8 +13,8 @@ import pytest
 
 # internal packages
 from erc_8004_local_agents.data.decoder import process_event_logs
+from erc_8004_local_agents.data.evm_export import save_history_to_json
 from erc_8004_local_agents.simulation import SimulationEnvironment
-from tests.helpers.evm_export import save_history_to_json
 
 # logging
 logger = logging.getLogger(__name__)

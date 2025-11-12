@@ -8,7 +8,7 @@ from web3.providers.eth_tester import EthereumTesterProvider
 from web3.types import TxReceipt
 
 # internal packages
-from tests.helpers.evm_export import save_history_to_json
+from erc_8004_local_agents.data.evm_export import save_history_to_json
 
 
 def test_export_transactions(

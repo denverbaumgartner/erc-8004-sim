@@ -13,8 +13,8 @@ import pytest
 from erc8004 import ERC8004Client
 
 from erc_8004_local_agents.agents.base import ChainedAgent
+from erc_8004_local_agents.data.evm_export import save_history_to_json
 from erc_8004_local_agents.simulation import SimulationEnvironment
-from tests.helpers.evm_export import save_history_to_json
 
 logger = logging.getLogger(__name__)
 
