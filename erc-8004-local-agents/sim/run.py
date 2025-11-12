@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 #!/usr/bin/env python3
 """Standalone ERC-8004 Agent Simulation Runner.
 
