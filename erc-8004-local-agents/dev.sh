@@ -48,6 +48,7 @@ test_command() {
 }
 
 commit_command() {
+    license_command
     format_command
     docstring_format_command
     sort_command
@@ -55,6 +56,10 @@ commit_command() {
     pep8_check_command
     test_command
     requirements_command
+}
+
+license_command() {
+    poetry run reuse annotate --copyright "2025 Semiotic Labs" --license "Apache-2.0" sim/ src/erc_8004_local_agents/ tests/
 }
 
 # help menu
@@ -75,6 +80,7 @@ show_help() {
     echo "  lint                   Lint the code"
     echo "  test                   Run the tests"
     echo "  commit                 Format, lint, and test the code"
+    echo "  license                Add license headers to files"
 }
 
 # handle command line arguments
@@ -96,8 +102,9 @@ else
         "lint") lint_command ;;
         "test") test_command ;;
         "commit") commit_command ;;
+        "license") license_command ;;
         *)
-            echo "Usage: $0 {test|lint|format|docstring-format|pep-check|lint|test|commit}"
+            echo "Usage: $0 {test|lint|format|docstring-format|pep-check|lint|test|commit|license}"
             exit 1
             ;;
     esac
