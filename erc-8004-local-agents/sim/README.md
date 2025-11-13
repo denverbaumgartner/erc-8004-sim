@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Semiotic Labs
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # ERC-8004 Simulation Framework
 
 This document provides an overview of the simulation framework's architecture, detailing how it works and what key components you should be aware of when working with the code.

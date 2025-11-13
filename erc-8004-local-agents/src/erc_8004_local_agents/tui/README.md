@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Semiotic Labs
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # ERC-8004 Simulation TUI
 
 This directory contains a Textual-based Terminal User Interface (TUI) for monitoring the ERC-8004 agent simulation.

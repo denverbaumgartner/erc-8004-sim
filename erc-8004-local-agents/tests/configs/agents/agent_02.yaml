@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 wallet_config: 
   address: "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69"
   private_key: "0x0000000000000000000000000000000000000000000000000000000000000003"
