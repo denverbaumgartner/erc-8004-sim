@@ -21,6 +21,12 @@ requirements_command() {
     poetry run pip freeze > requirements.txt
 }
 
+license_command() {
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive src/erc_8004_local_agents/
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive sim/
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive tests/
+}
+
 format_command() {
     poetry run black .
 }
@@ -56,10 +62,6 @@ commit_command() {
     pep8_check_command
     test_command
     requirements_command
-}
-
-license_command() {
-    poetry run reuse annotate --copyright "2025 Semiotic Labs" --license "Apache-2.0" sim/ src/erc_8004_local_agents/ tests/
 }
 
 # help menu
