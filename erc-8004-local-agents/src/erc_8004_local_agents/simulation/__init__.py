@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 """Simulation environment and utilities for ERC-8004 agents."""
 
 # Utilities are available for import but not exported by default

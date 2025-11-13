@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 # tests/test_simulation_fixture.py
 """Tests for the simulation_env fixture."""
 

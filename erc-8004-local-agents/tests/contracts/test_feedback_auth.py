@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 """E2E tests for feedback_auth in A2A message responses."""
 
 import asyncio

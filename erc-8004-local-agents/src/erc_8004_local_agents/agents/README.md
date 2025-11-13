@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Semiotic Labs
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Agent-to-Agent (A2A) Communication Framework
 
 This directory contains the core components for building and running interoperable agents using the Agent-to-Agent (A2A) communication protocol. It provides a server for hosting agents, a client for interacting with them, and base classes for agent implementation and execution logic.

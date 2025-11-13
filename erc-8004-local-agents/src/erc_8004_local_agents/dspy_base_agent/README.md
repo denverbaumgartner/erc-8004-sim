@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Semiotic Labs
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # DSPy Base Agent Framework
 
 This document provides instructions on how to extend the DSPy base agent framework by adding new agents and tools, and how to configure them.

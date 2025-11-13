@@ -120,6 +120,7 @@ coverage.xml
 *.py.cover
 .hypothesis/
 .pytest_cache/
+tests/__pycache__/
 cover/
 
 # Translations
@@ -420,23 +421,24 @@ vite.config.ts.timestamp-*
 .testmondata-shm
 .testmondata-wal
 
-# Claude File
-# CLAUDE.md
+# Claude Files
+CLAUDE.md
+.claude/
 
-# Local testing files
+# Cursor Files
+.cursor/
+
+# Local Testing Files
 scratch.ipynb
-
-tests/__pycache__/
-
-rubi-py/
 scratch/
 
-.cursor/
-.claude/
+# Local Artifacts
+erc-8004-local-agents/requirements.txt
+
+# Local Documents
 md/
 
 # erc-8004-sim
 agent_arena_logs/
 csv_export/
 pyevm_export/
-erc-8004-local-agents/requirements.txt

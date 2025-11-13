@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 Semiotic Labs
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # ERC-8004 Local Agents Test Fixture Documentation
 
 This document provides an overview of the pytest fixture system used for testing the ERC-8004 local agents. The fixtures are designed to provide a fully integrated environment that includes a local blockchain, deployed smart contracts, pre-configured accounts, and running agent servers.

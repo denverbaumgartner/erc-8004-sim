@@ -21,6 +21,12 @@ requirements_command() {
     poetry run pip freeze > requirements.txt
 }
 
+license_command() {
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive src/erc_8004_local_agents/
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive sim/
+    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive tests/
+}
+
 format_command() {
     poetry run black .
 }
@@ -48,6 +54,7 @@ test_command() {
 }
 
 commit_command() {
+    license_command
     format_command
     docstring_format_command
     sort_command
@@ -75,6 +82,7 @@ show_help() {
     echo "  lint                   Lint the code"
     echo "  test                   Run the tests"
     echo "  commit                 Format, lint, and test the code"
+    echo "  license                Add license headers to files"
 }
 
 # handle command line arguments
@@ -96,8 +104,9 @@ else
         "lint") lint_command ;;
         "test") test_command ;;
         "commit") commit_command ;;
+        "license") license_command ;;
         *)
-            echo "Usage: $0 {test|lint|format|docstring-format|pep-check|lint|test|commit}"
+            echo "Usage: $0 {test|lint|format|docstring-format|pep-check|lint|test|commit|license}"
             exit 1
             ;;
     esac

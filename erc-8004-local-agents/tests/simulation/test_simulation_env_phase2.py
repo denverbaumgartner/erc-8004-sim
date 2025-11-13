@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Semiotic Labs
+#
+# SPDX-License-Identifier: Apache-2.0
+
 # tests/test_simulation_env_phase2.py
 
 from erc_8004_local_agents.simulation import SimulationEnvironment
