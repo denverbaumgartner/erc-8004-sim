@@ -14,9 +14,8 @@ Before running the simulation, ensure you have:
 
 ```
 erc-8004-sim/
-├── erc-8004-contracts/         # ERC-8004 contracts
-├── erc-8004-local-agents/      # ERC-8004 agents and simulation environment
-└── erc-8004-py                 # ERC-8004 python sdk
+├── erc-8004-contracts/         # ERC-8004 Contracts
+└── erc-8004-local-agents/      # ERC-8004 Local Agents and Simulation Environment
 ```
 
 ## Quick Start
