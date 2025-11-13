@@ -49,11 +49,11 @@ Session output, by default, is recorded to `pyevm_export/erc_8004_sim_history.js
 
 For more detailed information about the different components of this simulation, please refer to the following `README` files:
 
-- [Simulation Configs](./erc-8004-local-agents/configs/README.md)
-- [Underlying Agent and Tools](./erc-8004-local-agents/src/erc_8004_local_agents/dspy_base_agent/README.md)
-- [A2A Agent](./erc-8004-local-agents/src/erc_8004_local_agents/agents/README.md)
-- [Simulation Runner](./erc-8004-local-agents/sim/README.md)
-- [The Simulation TUI](./erc-8004-local-agents/src/erc_8004_local_agents/tui/README.md)
+- [Simulation Configs](./docs/SIMULATION_CONFIGS.md)
+- [Underlying Agent and Tools](./docs/AGENTS_AND_TOOLS.md)
+- [A2A Agent](./docs/A2A_AGENTS.md)
+- [Simulation Runner](./docs/SIMULATION_RUNNER.md)
+- [The Simulation TUI](./docs/SIMULATION_TUI.md)
 
 ## Troubleshooting
 
