@@ -18,7 +18,7 @@ packages = [{include = "erc_8004_local_agents", from = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.13,<3.14"
-erc-8004-py = { path = "../erc-8004-py", develop = true }
+erc-8004-py = "0.1.4"
 a2a-sdk = { version = ">=0.3.9,<0.4.0", extras = ["all"] }
 uvicorn = ">=0.37.0,<0.38.0"
 python-dotenv = ">=1.1.1,<2.0.0"

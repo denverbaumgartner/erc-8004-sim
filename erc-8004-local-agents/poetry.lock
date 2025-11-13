@@ -1493,8 +1493,10 @@ optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 markers = "implementation_name == \"cpython\" or implementation_name == \"pypy\""
-files = []
-develop = true
+files = [
+    {file = "erc_8004_py-0.1.4-py3-none-any.whl", hash = "sha256:319d7901e040ef60494bbc8a54f3bfe812de9f5c09e5351e459e3a72d748a6b2"},
+    {file = "erc_8004_py-0.1.4.tar.gz", hash = "sha256:c73ca2bd069eba47123a4d4383f70e485fad814c752d40bc508cc0973ddd4e8f"},
+]
 
 [package.dependencies]
 requests = ">=2.28.0"
@@ -1503,10 +1505,6 @@ web3 = ">=6.0.0"
 
 [package.extras]
 dev = ["black (>=23.0.0)", "flake8 (>=6.0.0)", "mypy (>=1.0.0)", "pytest (>=7.0.0)", "pytest-asyncio (>=0.21.0)", "python-dotenv (>=1.0.0)"]
-
-[package.source]
-type = "directory"
-url = "../erc-8004-py"
 
 [[package]]
 name = "eth-abi"
@@ -5195,7 +5193,7 @@ aiomysql = {version = ">=0.2.0", optional = true, markers = "extra == \"aiomysql
 aiosqlite = {version = "*", optional = true, markers = "extra == \"aiosqlite\""}
 asyncpg = {version = "*", optional = true, markers = "extra == \"postgresql-asyncpg\""}
 greenlet = [
-    {version = ">=1", optional = true, markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\" or extra == \"asyncio\" or extra == \"postgresql-asyncpg\" or extra == \"aiosqlite\" or extra == \"aiomysql\""},
+    {version = ">=1", optional = true, markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\" or extra == \"asyncio\" or extra == \"postgresql-asyncpg\""},
     {version = ">=1", optional = true, markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\" or extra == \"asyncio\" or extra == \"postgresql-asyncpg\" or extra == \"aiosqlite\""},
     {version = ">=1", optional = true, markers = "platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"x86_64\" or platform_machine == \"amd64\" or platform_machine == \"AMD64\" or platform_machine == \"win32\" or platform_machine == \"WIN32\" or extra == \"asyncio\" or extra == \"postgresql-asyncpg\" or extra == \"aiosqlite\" or extra == \"aiomysql\""},
 ]
@@ -6044,4 +6042,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "38c647a2daced66e185aa102387ed13831f6d392a6388773ed0f37a67f8fb439"
+content-hash = "2ccff52cb8fae147a393f9955cf3425df7f8a011f322f46328020e7eecbdefef"

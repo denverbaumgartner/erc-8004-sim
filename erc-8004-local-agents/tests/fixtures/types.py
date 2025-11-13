@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Semiotic Labs
 #
 # SPDX-License-Identifier: Apache-2.0
-
 """Type definitions for test fixtures.
 
 This module re-exports types from src for backward compatibility with existing tests.

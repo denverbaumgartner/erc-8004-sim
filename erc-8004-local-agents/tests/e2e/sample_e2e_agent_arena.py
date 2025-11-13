@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Semiotic Labs
 #
 # SPDX-License-Identifier: Apache-2.0
-
 """E2E Agent Arena - CLI for comparing two agent responses side-by-side."""
 
 import asyncio
