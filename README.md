@@ -1,6 +1,6 @@
 # ERC-8004 Simulation
 
-This repository contains the code for the ERC-8004 simulation.
+This repository contains code for running agent simulations on the ERC-8004 framework.
 
 ## Prerequisites
 
@@ -24,6 +24,9 @@ erc-8004-sim/
 For the fastest setup, run these commands in sequence:
 
 ```bash
+# 0. Ensure the script is executable
+chmod +x run.sh
+
 # 1. Install dependencies and submodules
 ./run.sh install
 
@@ -40,31 +43,7 @@ cp .env.example .env
 # Edit .env and add: OPENROUTER_API_KEY=your_api_key_here
 ```
 
-## Running the Simulation
-
-For convenience, one can use `run.sh` for setup and running the simulation. Ensure the script is executable (this project utilizes poetry, so ensure you have it installed (see [python-poetry/poetry](https://github.com/python-poetry/poetry))):
-
-```bash
-chmod +x run.sh
-```
-
-Then run the script to install dependencies:
-
-```bash
-./run.sh install
-```
-
-Then set the environment variables:
-
-```bash
-./run.sh setup-env
-```
-
-Then run the simulation:
-
-```bash
-./run.sh run-tui
-```
+Session output, by default, is recorded to `pyevm_export/erc_8004_sim_history.json`.
 
 ## Deeper Dive
 
@@ -101,3 +80,7 @@ python3 --version
 ```
 
 If you need to install Python 3.13, visit [python.org](https://www.python.org/downloads/).
+
+## License
+
+This project is licensed under the [Apache 2.0 License](LICENSE).
