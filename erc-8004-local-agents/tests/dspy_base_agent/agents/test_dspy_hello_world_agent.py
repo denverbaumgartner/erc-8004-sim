@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Semiotic Labs
+# SPDX-FileCopyrightText: 2025 Semiotic AI, Inc.
 #
 # SPDX-License-Identifier: Apache-2.0
 """E2E tests for DSPy HelloWorld agent."""
