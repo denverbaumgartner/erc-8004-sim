@@ -22,9 +22,9 @@ requirements_command() {
 }
 
 license_command() {
-    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive src/erc_8004_local_agents/
-    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive sim/
-    poetry run reuse annotate --copyright "Semiotic Labs" --license "Apache-2.0" --recursive tests/
+    poetry run reuse annotate --copyright "Semiotic AI, Inc." --license "Apache-2.0" --recursive src/erc_8004_local_agents/
+    poetry run reuse annotate --copyright "Semiotic AI, Inc." --license "Apache-2.0" --recursive sim/
+    poetry run reuse annotate --copyright "Semiotic AI, Inc." --license "Apache-2.0" --recursive tests/
 }
 
 format_command() {
